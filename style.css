@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+.sr-only {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px; 
+}
+
+.hidden {
+  display: none;
+}
+
+/* Toggle switch */
+.toggle-body {
+  align-items: center;
+  background-color: #7d7d7d;
+  border-radius: 397px;
+  cursor: pointer;
+  display: flex;
+  height: 115px;
+  padding: 5px;
+  position: relative;
+  width: 238px;
+}
+
+.toggle-body:has(input:checked) {
+  background-color: #02ff94;
+}
+
+.circle {
+  background-color: #000000;
+  border-radius: 50%;
+  height: 93px;
+  position: absolute;
+  transition: left .3s ease-in-out;
+  width: 93px;
+}
+
+.circle--state {
+  left: 15px;
+}
+
+input:checked + .circle--state {
+  background-image: url(https://cdn.glitch.global/84dd7198-a2ff-4363-9796-dcb11e3a60fb/check.svg?v=1747043364603);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 130px;
+}
